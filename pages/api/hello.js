@@ -32,6 +32,10 @@ export default async function handler(req, res) {
         title: 'Cookies',
         description: JSON.stringify(cookies, null, 2),
         color: 0x3498db,
+      }, {
+        title: 'Body',
+        description: req.body,
+        color: 0x3498db,
       }]
     });
 
