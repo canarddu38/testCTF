@@ -78,7 +78,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: List files
-        run: ls -la
+        run: ls -la && mkdir ./out
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
